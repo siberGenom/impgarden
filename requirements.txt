@@ -68,6 +68,7 @@ SecretStorage==3.3.1
 six==1.16.0
 systemd-python==234
 tbm-utils==2.6.0
+tkinter==8.6.12
 ubuntu-advantage-tools==27.12
 ubuntu-drivers-common==0.0.0
 ufw==0.36.1

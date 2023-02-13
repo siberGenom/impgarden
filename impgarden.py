@@ -94,9 +94,11 @@ class ImpGarden(tk.Tk):
                 full_path = lambda x: os.path.abspath(os.path.join(album_path, x))
                 tracks = list(filter(is_track, map(full_path, os.listdir(album_path))))
                 format = get_format(tracks[0])
+                print(f"Merging {album}")
                 merged = merge_tracks(sorted(tracks, key=get_track_number))
                 album_path = f"{self.output_str_var.get()}/{os.path.relpath(album)}.{format}"
                 merged.export(album_path, format=format)
+        print("Done!")
 
 if __name__ == "__main__":
     root = tk.Tk()

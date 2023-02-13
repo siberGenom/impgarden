@@ -3,7 +3,7 @@
 Python utility to merge a folder of albums into single files.
 
 ## Install
-Requires FFMPEG, python3 and tkinter
+Requires FFMPEG and python3. Tkinter module has to be installed with package manager.
 To install libraries (for example) on ubuntu:
 ```bash
 sudo apt-get update && sudo apt-get upgrade

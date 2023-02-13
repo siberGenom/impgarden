@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 
-import sys
 import os
 import audio_metadata
-import pathlib
-from pydub import AudioSegment
 import tkinter as tk
+from pydub import AudioSegment
 from tkinter import filedialog
+from pygame import mixer
 
 """
     TODO:
@@ -15,6 +14,7 @@ from tkinter import filedialog
 """
 
 FORMATS = ["mp3", "flac"]
+imp_thread_active = True
 
 def select_source_folder():
     global SOURCE_FOLDER
@@ -100,5 +100,9 @@ class ImpGarden(tk.Tk):
 
 if __name__ == "__main__":
     root = tk.Tk()
+    mixer.init()
+    mixer.music.load("the field imps have once again gotten into our radishes.mp3")
+    mixer.music.play(loops=-1)
     ImpGarden(root)
     root.mainloop()
+    mixer.music.stop()
